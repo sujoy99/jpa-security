@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http:www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+
+
+<form th:action="@{/addUser}" method="post" th:object="${user}">
+
+<input type="text" th:field="*{name}" />
+<input type="text" th:field="*{password}" />
+
+<select th:field="*{userType}">
+
+<option th:each="i: ${userTypeList}" th:value="${i.typeId}" th:text="${i.description}"></option>
+
+</select>
+
+<input type="submit" value="save"/>
+
+</form>
+
+</body>
+</html>

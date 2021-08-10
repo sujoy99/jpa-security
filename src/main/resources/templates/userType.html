@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+
+
+	<a th:href="@{/addUserType}">Add New</a>
+
+	<table border="1">
+		<tr>
+			<td>Id</td>
+			<td>Desc</td>
+		</tr>
+
+		<tr th:each="u:${userTypeList}">
+			<td th:text="${u.typeId}"></td>
+			<td th:text="${u.description}"></td>
+		</tr>
+	</table>
+</body>
+</html>

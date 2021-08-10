@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http:www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+
+
+<form th:action="@{/addUserType}" method="post" th:object="${userType}">
+
+<input type="text" th:field="*{description}" />
+
+<input type="submit" value="save"/>
+
+</form>
+
+</body>
+</html>
